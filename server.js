@@ -264,12 +264,12 @@ app.get("/api/products-list", async (req, res) => {
         const { category_id, subcategory_id } = req.query;
 
         // Validate (both required)
-        if (!category_id || !subcategory_id) {
-            return res.status(400).json({
-                status: false,
-                message: "category_id and subcategory_id are required"
-            });
-        }
+        // if (!category_id || !subcategory_id) {
+        //     return res.status(400).json({
+        //         status: false,
+        //         message: "category_id and subcategory_id are required"
+        //     });
+        // }
 
         // Call PHP API with params
         const response = await axios.get(
